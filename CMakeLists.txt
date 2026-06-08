@@ -8,6 +8,8 @@ qt_standard_project_setup()
 qt_add_executable(Softwareudvikling
     main.cpp
     Monster_list
+    monster.h monster.cpp
+    karakter.h karakter.cpp
 )
 
 target_link_libraries(Softwareudvikling
