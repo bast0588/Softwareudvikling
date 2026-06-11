@@ -14,6 +14,7 @@ public:
     void addMonster(const Monster& m);
     bool hasAliveMonsters() const;
     Monster& getNextAliveMonster();
+    void printMonster();
 
 private:
     std::string name;

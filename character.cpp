@@ -58,6 +58,13 @@ Monster &Character::getNextAliveMonster()
     throw std::runtime_error("No living mosters!");
 }
 
+void Character::printMonster()
+{
+    for(auto& m : monsters){
+        std::cout << m.getName() << " (HP: " << m.getHP() << ", STR: " << m.getStrength() << ")\n";
+    }
+}
+
 
 
 

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 //helper function
 int readIntLine(){
@@ -12,7 +13,7 @@ int readIntLine(){
     try{
         return stoi(line);
     } catch (...) {
-        std::cout << "Invalid input, try again";
+        std::cout << "Invalid input, try again\n";
         return readIntLine();
     }
 }
@@ -66,7 +67,8 @@ void Game::adventure(Character &c)
     while (true) {
         std::cout << "\n--- ADVENTURE MENU ---\n";
         std::cout << "1. Fight monster\n";
-        std::cout << "2. Main menu\n";
+        std::cout << "2. View players monster\n";
+        std::cout << "3. Main menu\n";
 
         int choice = readIntLine();
 
@@ -77,8 +79,10 @@ void Game::adventure(Character &c)
                 return;
             }
         } else if(choice == 2){
+            c.printMonster();
+        } else if(choice == 3){
             return;
-        } else {
+        }else{
             std::cout << "invalid input\n";
         }
     }
@@ -107,10 +111,10 @@ void Game::fight(Character &c, Monster enemy)
     while (!playerMonster.isDead() && !enemy.isDead()){ //Main fighting loop
         if(playerTurn){ //Spillers tur
             enemy.setHP(enemy.getHP() - playerMonster.getStrength());
-            std::cout << playerMonster.getName() << "Deals " << playerMonster.getStrength() << "Damage! " << enemy.getName() << " has " << enemy.getHP() << " HP!\n";
+            std::cout << "Player " << playerMonster.getName() << " Deals " << playerMonster.getStrength() << "Damage! Enemy " << enemy.getName() << " has " << enemy.getHP() << " HP!\n";
         } else { // Modstanders tur
             playerMonster.setHP(playerMonster.getHP() - enemy.getStrength());
-            std::cout << enemy.getName() << "Deals " << enemy.getStrength() << "Damage! " << playerMonster.getName() << " has " << playerMonster.getHP() << " HP!\n";
+            std::cout << "Enemy " << enemy.getName() << " Deals " << enemy.getStrength() << " Damage! Player " << playerMonster.getName() << " has " << playerMonster.getHP() << " HP!\n";
         }
         playerTurn = !playerTurn;
     }
@@ -118,6 +122,7 @@ void Game::fight(Character &c, Monster enemy)
         std::cout << playerMonster.getName() << "died!\n";
     } else {
         std::cout << "You beat " << enemy.getName() << "!\n";
+        std::cout << "Adding " << enemy.getName() << " to roster\n";
         c.addMonster(enemy);
     }
 }
