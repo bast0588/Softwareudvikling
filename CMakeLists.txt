@@ -10,6 +10,8 @@ qt_add_executable(Softwareudvikling
     Monster_list
     monster.h monster.cpp
     karakter.h karakter.cpp
+    karakter.cpp
+    game.h game.cpp
 )
 
 target_link_libraries(Softwareudvikling

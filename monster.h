@@ -2,13 +2,16 @@
 #define MONSTER_H
 #include <string>
 
-class Monster {
+class monster {
 public:
-    Monster();
+    monster();
+    monster(std::string navn, int HP, int styrke);
     void setHp(int nyHp);
     int getHp();
     int getStyrke();
     void setStyrke(int nyStyrke);
+    std::string getNavn();
+
 private:
     std::string navn;
     int hp;

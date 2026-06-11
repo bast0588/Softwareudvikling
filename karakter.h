@@ -5,14 +5,15 @@
 class karakter{
 
 public:
-    karakter();
-    Monster getMonster(int i);
+    karakter(std::string navn);
+    monster getMonster(int i);
     std::string getNavn();
     void setNavn(std::string nytNavn);
+    void changeMonsterRoster(monster nytMonster, int i);
 
 private:
     std::string navn;
-    Monster monstre[4];
+    monster monstre[4];
 };
 
 #endif // KARAKTER_H
