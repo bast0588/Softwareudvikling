@@ -38,7 +38,7 @@ void Game::start()
         std::cout << "1. Start new charakter\n";
         std::cout << "2. Quit\n";
         int choice = readIntLine();
-        std::cout << "You have choicen " << choice;
+        std::cout << "You have choicen " << choice << "\n";
         if (choice == 1){
             Character c = createCharacter();
             adventure(c);
@@ -46,7 +46,7 @@ void Game::start()
             std::cout << "Bye bye \n";
             break;
         } else  {
-            std::cout << "invalidt input";
+            std::cout << "Invalid input, try again\n";
         }
     }
 }
@@ -106,21 +106,29 @@ void Game::fightMenu(Character &c)
 void Game::fight(Character &c, Monster enemy)
 {
     std::cout << "Staring fight against " << enemy.getName() <<"!\n";
-    Monster& playerMonster = c.getNextAliveMonster();
+    Monster* playerMonster = &c.getNextAliveMonster();
     bool playerTurn = rand() % 2;
-    while (!playerMonster.isDead() && !enemy.isDead()){ //Main fighting loop
+    while (!playerMonster->isDead() && !enemy.isDead()){ //Main fighting loop
         if(playerTurn){ //Spillers tur
-            enemy.setHP(enemy.getHP() - playerMonster.getStrength());
-            std::cout << "Player " << playerMonster.getName() << " Deals " << playerMonster.getStrength() << "Damage! Enemy " << enemy.getName() << " has " << enemy.getHP() << " HP!\n";
+            enemy.setHP(enemy.getHP() - playerMonster->getStrength());
+            std::cout << "Player " << playerMonster->getName() << " Deals " << playerMonster->getStrength() << " Damage! Enemy " << enemy.getName() << " has " << enemy.getHP() << " HP!\n";
         } else { // Modstanders tur
-            playerMonster.setHP(playerMonster.getHP() - enemy.getStrength());
-            std::cout << "Enemy " << enemy.getName() << " Deals " << enemy.getStrength() << " Damage! Player " << playerMonster.getName() << " has " << playerMonster.getHP() << " HP!\n";
+            playerMonster->setHP(playerMonster->getHP() - enemy.getStrength());
+            std::cout << "Enemy " << enemy.getName() << " Deals " << enemy.getStrength() << " Damage! Player " << playerMonster->getName() << " has " << playerMonster->getHP() << " HP!\n";
+        }
+
+        if(playerMonster->isDead()){ //Checks if player monster is dead
+            std::cout << playerMonster->getName() << " is dead \n";
+            if(!c.hasAliveMonsters()){
+                break;
+            } else {
+                playerMonster = &c.getNextAliveMonster();
+                std::cout << "Changing to " << playerMonster->getName() << "\n";
+            }
         }
         playerTurn = !playerTurn;
     }
-    if (playerMonster.isDead()){
-        std::cout << playerMonster.getName() << "died!\n";
-    } else {
+    if (!playerMonster->isDead()){
         std::cout << "You beat " << enemy.getName() << "!\n";
         std::cout << "Adding " << enemy.getName() << " to roster\n";
         c.addMonster(enemy);
