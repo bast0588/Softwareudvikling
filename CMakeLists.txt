@@ -13,6 +13,7 @@ qt_add_executable(Softwareudvikling
     character.cpp
     game.h game.cpp
     item.h item.cpp
+    status.h status.cpp
 )
 
 target_link_libraries(Softwareudvikling
