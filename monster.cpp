@@ -1,37 +1,34 @@
 #include "monster.h"
 
-monster::monster(){
-
+Monster::Monster(std::string name, int hp, int strength)
+    : name(name), hp(hp), strength(strength){
 }
 
-monster::monster(std::string navn, int HP, int styrke)
-{
-    this -> hp = HP;
-    this -> styrke = styrke;
-    this -> navn = navn;
+bool Monster::isDead() const{
+    return hp <= 0;
 }
 
-void monster::setHp(int nyHp)
+void Monster::setHP(int nyHp)
 {
     this -> hp = nyHp;
 }
 
-int monster::getHp()
+int Monster::getHP()
 {
     return hp;
 }
 
-int monster::getStyrke()
+int Monster::getStrength()
 {
-    return styrke;
+    return strength;
 }
 
-void monster::setStyrke(int nyStyrke)
+void Monster::setStrength(int newStrength)
 {
-    this -> styrke = nyStyrke;
+    this -> strength = newStrength;
 }
 
-std::string monster::getNavn()
+std::string Monster::getName()
 {
-    return navn;
+    return name;
 }

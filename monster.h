@@ -2,20 +2,21 @@
 #define MONSTER_H
 #include <string>
 
-class monster {
+class Monster {
 public:
-    monster();
-    monster(std::string navn, int HP, int styrke);
-    void setHp(int nyHp);
-    int getHp();
-    int getStyrke();
-    void setStyrke(int nyStyrke);
-    std::string getNavn();
+    Monster(const std::string name, int HP, int stength);
+
+    bool isDead() const;
+    void setHP(int newHP);
+    int getHP();
+    int getStrength();
+    void setStrength(int newStrength);
+    std::string getName();
 
 private:
-    std::string navn;
+    std::string name;
     int hp;
-    int styrke;
+    int strength;
 };
 
 #endif // MONSTER_H

@@ -9,8 +9,8 @@ qt_add_executable(Softwareudvikling
     main.cpp
     Monster_list
     monster.h monster.cpp
-    karakter.h karakter.cpp
-    karakter.cpp
+    character.h character.cpp
+    character.cpp
     game.h game.cpp
 )
 
