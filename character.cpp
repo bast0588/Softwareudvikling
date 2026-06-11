@@ -40,7 +40,6 @@ void Character::addMonster(const Monster &m)
 
 bool Character::hasAliveMonsters() const
 {
-    //Gennemgår alle monstre og ser hvorvidt der er nogle monstre der stadig er levende
     for(const auto& m : monsters){
         if(!m.isDead()){
             return true;
@@ -49,12 +48,16 @@ bool Character::hasAliveMonsters() const
     return false;
 }
 
-Monster& Character::getNextAliveMonster()
+Monster &Character::getNextAliveMonster()
 {
-    for (auto& m : monsters){
-        if (!m.isDead()){
+    for(auto& m : monsters){
+        if(!m.isDead()){
             return m;
         }
     }
-    throw std::runtime_error("No living monsters");
+    throw std::runtime_error("No living mosters!");
 }
+
+
+
+
