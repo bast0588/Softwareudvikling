@@ -10,7 +10,10 @@ public:
     Character(std::string name);
 
     std::string getName();
-    void setName(std::string newName);
+    void setName(std::string newName)
+    {
+        this -> name = newName;
+    }
     void addMonster(const Monster& m);
     bool hasAliveMonsters() const;
     Monster& getNextAliveMonster();

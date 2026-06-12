@@ -17,7 +17,7 @@ private:
     std::string name;
     int damage;
     float statusChance;
-    StatusType statusToApply;
+    StatusType statusType;
 };
 
 #endif // ITEM_H

@@ -13,8 +13,10 @@ std::string Character::getName()
 
 void Character::setName(std::string newName)
 {
-    this -> name = newName;
+
 }
+
+
 
 void Character::addMonster(const Monster &m)
 {
