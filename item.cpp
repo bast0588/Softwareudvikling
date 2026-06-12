@@ -22,5 +22,3 @@ StatusType Item::getStatusType() const
 {
     return statusType;
 }
-
-

@@ -2,7 +2,7 @@
 #define STATUS_H
 
 enum class StatusType{
-    none,Stunned,Paralyzed,Frozen,Cursed,Poisoned
+    None,Stunned,Paralyzed,Frozen,Cursed,Poisoned
 };
 
 class Status{
