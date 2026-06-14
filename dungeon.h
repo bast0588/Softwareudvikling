@@ -12,7 +12,7 @@ public:
     void addMonster(const Monster& m);
     void setReward(const Item& item);
     const Item& getReward() const;
-
+    const std::vector<Monster>& getMonsters() const;
 private:
     std::vector<Monster> monsters;
     Item reward;

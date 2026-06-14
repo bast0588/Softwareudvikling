@@ -1,0 +1,96 @@
+[33mcommit b90c20d2b9df74810f1e8b6122ec520b7ac08769[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Fri Jun 12 12:29:18 2026 +0200
+
+    Status, Item og Dungeon klasser burde virke
+
+[33mcommit 5ed8a278551dd776410fbf717144810f1c8813b3[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Fri Jun 12 12:03:33 2026 +0200
+
+    Items klasse h/cpp implimenteret
+
+[33mcommit 2656ba31d85f29b3af6b1bfa745a17a494eda297[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Fri Jun 12 11:57:36 2026 +0200
+
+    Items og status lavet lidt på
+
+[33mcommit de41abc304ffbd0c112acb386e0b582d3b835a7b[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Fri Jun 12 01:56:47 2026 +0200
+
+    StatusType og Status class tilføjet
+
+[33mcommit e0f8fc19a16eb0dc9cdd3c7adfb817f8d263a817[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Fri Jun 12 01:51:13 2026 +0200
+
+    Items class tilføjet
+
+[33mcommit 3e6ffe363151b27330fbf47f7818bdd79e9b2dff[m[33m ([m[1;31morigin/iteration-2[m[33m, [m[1;31morigin/iteration-1[m[33m, [m[1;32miteration-2[m[33m, [m[1;32miteration-1[m[33m)[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Thu Jun 11 20:21:32 2026 +0200
+
+    Fixed bug med monstre der ikke tog skade efter de var døde
+
+[33mcommit ec7d64af69b33dbdbafbf1ff6daeea562c4851eb[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Thu Jun 11 19:46:36 2026 +0200
+
+    Iteration 1 virker so so, det opfylder krav, men er ikke et rigtigt spil
+
+[33mcommit 93c10a51ac510febab84bc9ec73828bb2d247b35[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Thu Jun 11 18:19:09 2026 +0200
+
+    Har lavet en version der BURDE virke, pt er der fejl i cin når jeg køre det med QT creator, men tester om det virker på linux
+
+[33mcommit 508b53f784e927b2ec0057d64b8a16944ca419f9[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Thu Jun 11 15:34:12 2026 +0200
+
+    Har lavet om i Character og Monster klasserne, så det burde være lettere få det til at virke
+
+[33mcommit 3a52ed367886227cf67915b0899f7ebe4f1baaa4[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Thu Jun 11 14:33:28 2026 +0200
+
+    Monstre og karakter headerfiller har fået funktioner
+
+[33mcommit 6b874c8aca11776c6ad2c23d195a49ba40d7f80f[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Mon Jun 8 14:12:17 2026 +0200
+
+    Functioner er tilføjet til headerfiler
+
+[33mcommit b9a22426f14f4588ecbd23e7c6a766852b2bef7e[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Mon Jun 8 13:41:55 2026 +0200
+
+    Monstre og karakter klasse er tilføjet
+
+[33mcommit fdd89983850288044858066e8ef73f8f75f0c40e[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Mon Jun 8 13:38:22 2026 +0200
+
+    Test 2
+
+[33mcommit 7b9370ba778c323e4d7dba0e8c63d6fd9cb7e949[m
+Merge: 3d6c8d1 62bec3d
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Mon Jun 8 13:32:05 2026 +0200
+
+    Merge branch 'main' of https://github.com/bast0588/Softwareudvikling
+
+[33mcommit 3d6c8d13fdfbc0dada75ac43486d81a2051dd61d[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Mon Jun 8 13:20:26 2026 +0200
+
+    Test 1
+
+[33mcommit 62bec3df405b3f99363036e67703414d049862af[m
+Author: bast0588 <100563464+bast0588@users.noreply.github.com>
+Date:   Mon Apr 20 17:08:24 2026 +0200
+
+    Initial commit
