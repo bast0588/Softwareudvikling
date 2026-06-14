@@ -16,6 +16,7 @@ qt_add_executable(Softwareudvikling
     status.h status.cpp
     status.cpp
     dungeon.h dungeon.cpp
+    database.h database.cpp
 )
 
 target_link_libraries(Softwareudvikling
