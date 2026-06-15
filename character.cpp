@@ -3,12 +3,22 @@
 #include <stdexcept>
 
 Character::Character(std::string name)
-    : name(name){
+    : name(name), dbId(-1) {
 }
 
-std::string Character::getName()
+std::string Character::getName() const
 {
     return name;
+}
+
+int Character::getDbId() const
+{
+    return dbId;
+}
+
+void Character::setDbId(int id)
+{
+    dbId = id;
 }
 
 void Character::addMonster(const Monster &m)
@@ -97,6 +107,11 @@ void Character::healMonsters()
     }
 }
 
+const std::vector<Monster> &Character::getMonstersConst() const
+{
+    return monsters;
+}
+
 void Character::addItemToInventory(const Item &item)
 {
     itemInventory.push_back(item);
@@ -116,7 +131,6 @@ void Character::givItemToMonster(int monsterIndex, int itemIndex)
     std::cout << itemInventory[itemIndex].getName() << " Given to " << monsters[monsterIndex].getName() << "\n";
 
     itemInventory.erase(itemInventory.begin()+itemIndex);
-
 }
 
 const std::vector<Item> &Character::getInventory() const
